@@ -22,7 +22,6 @@ def test_starts_with_upper_case_ends_with_no_punct():
     result = grammer_check_sentence("Hello darkness my old friend") 
     assert result == False
 
-
 #test if lower case start and no punct at end returns False
 def test_starts_with_lower_case_ends_with_no_punct():
     result = grammer_check_sentence("hello darkness my old friend") 
