@@ -13,7 +13,7 @@ _Include the name of the function, its parameters, return value, and side effect
 ```python
 # EXAMPLE
 
-def starts_with_capital_ends_with_suitable_mark(text):
+def grammar_check_sentence(text):
     """verify that a text starts with a capital letter and ends with a suitable sentence-ending punctuation mark.
 
     Parameters: (list all parameters and their types)
@@ -36,36 +36,60 @@ _Make a list of examples of what the function will take and return._
 # EXAMPLE
 
 """
+Given a text starting with capital and ending with full stop
+It returns True
+"""
+grammer_check_sentence("Hello darkness my old friend.") 
+#=> True
+
+"""
+Given a text starting with capital and ending with question mark
+It returns True
+"""
+grammer_check_sentence("Hello darkness my old friend?") 
+#=> True
+
+"""
+Given a text starting with capital and ending with exclamation mark
+It returns True
+"""
+grammer_check_sentence("Hello darkness my old friend!") 
+#=> True
+
+"""
 Given a text starting with capital but ending with no punct
 It returns False
 """
-
-
-"""
-Given a text of 400 words
-It returns 2.0
-"""
-
+grammer_check_sentence("Hello darkness my old friend") 
+#=> False
 
 """
-Given a text of 300 words
-It returns 1.5
+Given a text starting with lower case and ending with correct
+It returns False
+"""
+grammer_check_sentence("hello darkness my old friend.") 
+#=> False
 
 """
-
+Given a text starting with lower case and ending with no punct 
+It returns False
+"""
+grammer_check_sentence("hello darkness my old friend") 
+#=> False
 
 """
-Given a text of 287 words
-It returns 1.44 (1.435 rounded to two  decimal places)
-
+Given a text starting with lower case and ending with incorrect punct
+It returns False
 """
-
+grammer_check_sentence("hello darkness my old friend,") 
+#=> False
 
 """
 Given an empty string
 It raises an error 
 """
-
+grammer_check_sentence("") 
+#=> raises error: "Empty text provided"
 
 """
 
